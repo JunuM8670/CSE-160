@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <title>Assignment1</title>
+</head>
+
+<body onload="main()">
+  <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports Canvas
+  </canvas>
+
+<br><br>
+
+<button id="clearButton">Clear Canvas</button>
+
+<br><br>
+
+<label>Drawing Mode:</label><br>
+<button id="squareButton">Squares</button>
+<button id="triangleButton">Triangles</button>
+<button id="circleButton">Circles</button>
+
+<br><br>
+
+<label>Shape Color:</label><br>
+<label for="redS">Red</label>
+<input type="range" id="redS" min="0" max="20" value="0">
+
+<label for="greenS">Green</label>
+<input type="range" id="greenS" min="0" max="20" value="0">
+
+<label for="blueS">Blue</label>
+<input type="range" id="blueS" min="0" max="20" value="20">
+
+<br><br>
+
+<label for="sizeS">Shape Size:</label>
+<input type="range" id="sizeS" min="5" max="40" value="10">
+
+<label for="segmentS">(Circles) Segment Count:</label>
+<input type="range" id="segmentS" min="3" max="20" value="10">
+
+<br><br>
+
+<button id="pictureButton">Draw Picture</button>
+<p>Reference Drawing:</p>
+<img src="reference.png" width="250">
+
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="asg1.js"></script>
+
+</body>
+
+</html>
