@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <title>Assignment 2</title>
+</head>
+
+<body onload="main()">
+
+  <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports Canvas
+  </canvas>
+
+  <br><br>
+
+  <h3>Camera / Global Rotation</h3>
+
+  <label for="globalY">Global Y Rotation</label>
+  <input type="range" id="globalY" min="-180" max="180" value="0">
+
+  <br>
+
+  <label for="globalX">Global X Rotation</label>
+  <input type="range" id="globalX" min="-90" max="90" value="0">
+
+  <br><br>
+
+  <h3>Joint Controls</h3>
+
+  <label for="thighSlide">Upper Leg Joint</label>
+  <input type="range" id="thighSlide" min="-45" max="45" value="0">
+
+  <br>
+
+  <label for="calfSlide">Lower Leg Joint</label>
+  <input type="range" id="calfSlide" min="-45" max="45" value="0">
+
+  <br>
+
+  <label for="footSlide">Foot Joint</label>
+  <input type="range" id="footSlide" min="-45" max="45" value="0">
+
+  <br><br>
+
+  <h3>Animation</h3>
+
+  <button id="animationOn">Animation On</button>
+  <button id="animationOff">Animation Off</button>
+
+  <p>Drag the mouse on the canvas to rotate the animal.</p>
+  <p>Shift-click the canvas for a special poke animation.</p>
+
+  <p id="performance">FPS: --</p>
+
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix-cse160.js"></script>
+  <script src="asg2.js"></script>
+
+</body>
+
+</html>
