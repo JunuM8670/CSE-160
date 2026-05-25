@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <title>Assignment 4</title>
+</head>
+
+<body onload="main()">
+
+  <canvas id="webgl" width="320" height="320">
+    Please use a browser that supports Canvas
+  </canvas>
+
+  <p id="story">
+    Lighting Demo: Use W/A/S/D to move, Q/E or mouse to turn. Toggle normals, lighting, and spotlight with the buttons.
+  </p>
+
+  <p id="performance">FPS: --</p>
+
+  <p>
+  <button onclick="g_normalOn = false">Normal Off</button>
+  <button onclick="g_normalOn = true">Normal On</button>
+  </p>
+
+  <p>
+  <button onclick="g_spotLightOn = false">Spotlight Off</button>
+  <button onclick="g_spotLightOn = true">Spotlight On</button>
+  </p>
+
+  <p>
+  Light X:
+  <input type="range" min="8" max="20" value="14" step="0.1" oninput="setLightX(this.value)">
+  Light Y:
+  <input type="range" min="1" max="8" value="4" step="0.1" oninput="setLightY(this.value)">
+  Light Z:
+  <input type="range" min="-16" max="-4" value="-10" step="0.1" oninput="setLightZ(this.value)">
+  </p>
+
+  <p>
+  Light Red:
+  <input type="range" min="0" max="100" value="100" oninput="setLightRed(this.value)">
+  Light Green:
+  <input type="range" min="0" max="100" value="100" oninput="setLightGreen(this.value)">
+  Light Blue:
+  <input type="range" min="0" max="100" value="100" oninput="setLightBlue(this.value)">
+  </p>
+
+  <p>
+  <button onclick="g_lightAnimationOn = false">Light Animation Off</button>
+  <button onclick="g_lightAnimationOn = true">Light Animation On</button>
+  </p>
+
+  <p>
+  <button onclick="g_lightingOn = false">Point Light Off</button>
+  <button onclick="g_lightingOn = true">Point Light On</button>
+  </p>
+
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix-cse160.js"></script>
+  <script src="Camera.js"></script>
+  <script src="asg4.js"></script>
+
+</body>
+
+</html>
